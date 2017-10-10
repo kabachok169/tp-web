@@ -20,7 +20,7 @@ from views import *
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^index/', index),
+    url(r'^index/', AboutView.as_view()),
     url(r'^data/', data),
     url(r'^createquestion/', create_question),
     url(r'^onequestion/', one_question),

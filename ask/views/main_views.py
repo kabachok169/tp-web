@@ -10,11 +10,16 @@ from django.http.response import FileResponse, HttpResponseNotModified
 from django.utils.http import http_date
 from django.conf import settings
 from django.core.urlresolvers import reverse
+from django.views.generic import TemplateView
+
 import os
 
 
-def index(request):
-    return render(request, 'index.html')
+# def index(request):
+#     return render(request, 'index.html')
+
+class AboutView(TemplateView):
+    template_name = 'index.html'
 
 def data(request):
 
