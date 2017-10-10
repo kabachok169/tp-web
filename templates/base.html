@@ -1,0 +1,88 @@
+<!--{% load staticfiles %}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyAsk</title>
+    <link rel="stylesheet" href="ask_dmitriev/static/css/reset.css">
+    <link rel="stylesheet" href="ask_dmitriev/static/css/styles.css">
+    <link rel="stylesheet" href="ask_dmitriev/static/css/creating_question.css">
+    <link rel="stylesheet" href="ask_dmitriev/static/css/one_question.css">
+    <link rel="stylesheet" href="ask_dmitriev/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ask_dmitriev/static/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="ask_dmitriev/static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="ask_dmitriev/static/js/bootstrap-modal.js"></script>
+</head>
+
+<body>
+<div class="top-bar">
+        <div class="row top">
+            <div class="col-md-8 left-top">
+                <div class="col-md-5">
+                    <h1 class="main-header">MyAsk</h1>
+                </div>
+                <div class="col-md-7">
+                    <div class="center-top">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 right-top">
+                <div>
+                    <div class="avatar">
+                        <img src="../static/imgs/i.jpeg">
+                    </div>
+                    <div class="acc-info">
+                        <div class="acc-name">
+                            <p>Mr.Smith</p>
+                        </div>
+                        <div class="acc-attr">
+                            <a class="settings">settings</a>
+                            <a class="log-out">log out</a>
+                            <a class="settings" style="display: none">registration</a>
+                            <a class="log-out" style="display: none">log in</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+<div class="container main-content">
+
+
+    <div class="row headers-row">
+        {% block headers %}
+        {% endblock %}
+    </div>
+
+    <div class="row main-row">
+
+        <div class="col-md-8 left-main-col">
+            {% block left_main_content %}
+            {% endblock %}
+        </div>
+
+        <div class="col-md-4 right-main-col">
+            {% block right-main-content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <div class="row bottom-row">
+        {% block bottom %}
+        {% endblock %}
+    </div>
+
+</div>
+
+</body>
+</html>

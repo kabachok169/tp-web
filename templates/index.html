@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block headers %}
+    <div class="col-md-4">
+        <h1 class="questions-headers">New Questions</h1>
+    </div>
+    <div class="col-md-4">
+        <a class="link">Hot Questions</a>
+    </div>
+{% endblock %}
+
+{% block left_main_content %}
+    <div class="question-row">
+        {% include "question_template.html" %}
+        {% include "question_template.html" %}
+        {% include "question_template.html" %}
+    </div>
+{% endblock %}
+
+{% block right-main-content %}
+    {% include "right_col_template.html" %}
+{% endblock %}
+
+{% block bottom %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}

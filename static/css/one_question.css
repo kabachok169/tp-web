@@ -1,0 +1,54 @@
+.full-question-row{
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.answers-row{
+    padding: 60px;
+}
+
+.answers-row>div{
+    width: 100%;
+    height: 100%;
+}
+
+.answer{
+    border-radius: 10px;
+}
+
+.answer:hover{
+    background-color: #d0eeff;
+}
+
+.answer-annotation{
+    font-size: 18px;
+}
+
+.answer-header{
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.answer-bottom{
+
+}
+
+.answer-col{
+
+}
+
+.answer-input{
+    width: 100%;
+    padding: 40px;
+}
+.answer-input>textarea{
+    width: 100%;
+    height: 200px;
+}
+
+.answer-input>a{
+    position: relative;
+    top: 20px;
+}

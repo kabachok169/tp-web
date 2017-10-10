@@ -1,0 +1,284 @@
+.top {
+    margin-top: 3px !important;
+    /*margin-bottom: 20px !important;*/
+    /*margin-left: 10% !important;*/
+    /*margin-right: 10% !important;*/
+    height: auto;
+    padding: 10px;
+}
+
+body{
+    background-image: url("")
+}
+
+a{
+    cursor: pointer;
+}
+
+.top-bar {
+
+    z-index: 100;
+    /*border-bottom: thin solid black;*/
+    width: 100%;
+    position: fixed;
+    top: -10px;
+    height: 80px;
+    background-color: #bbd8ff;
+}
+
+.right-top {
+    height: 100%;
+}
+
+.right-top > div {
+    border: thin solid #707070;
+    border-radius: 10px;
+    width: 200px;
+    margin-left: 50px;
+    height: 100%;
+}
+
+.left-top {
+    height: auto;
+    margin-top: 15px !important;
+}
+
+.main-content{
+    position: relative;
+
+    top: 80px;
+}
+
+.main-header {
+    font-size: 36px !important;
+    margin-left: 100px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.questions-headers{
+    font-size: 30px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.headers-row{
+    /*position: relative;*/
+    /*top: -100px;*/
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    /*margin-bottom: 20px !important;*/
+    /*margin-left: 10% !important;*/
+    /*margin-right: 10% !important;*/
+    padding: 10px;
+}
+
+.link{
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+}
+
+
+
+.center-top {
+    height: 39.6px !important;
+}
+
+
+
+.search {
+    width: 100%;
+    height: 100%;
+}
+
+.search > a {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+.avatar {
+    float: left;
+    height: 61px;
+}
+
+.avatar > img {
+    border-radius: 10px ;
+    padding: 5px;
+    width: 90px;
+    height: 100%;
+}
+
+.acc-info {
+    height: 100%;
+}
+
+.acc-name {
+    height: 50%;
+}
+
+.acc-name > p {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.acc-attr {
+    margin-left: auto;
+    margin-right: 0;
+    height: 50%;
+}
+
+.log-out{
+    margin-left: 3px;
+}
+
+.settings{
+    margin-right: 3px;
+}
+
+.main-row{
+    /*height: 700px;*/
+}
+
+.left-main-col{
+    /*border-right: thin solid black;*/
+    /*border-top: thin solid black;*/
+    height: 100%;
+    padding: 10px;
+}
+
+.question-row{
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+    /*overflow: auto;*/
+}
+
+.right-main-col{
+    height: 100%;
+}
+
+.question{
+    width: 700px;
+    height: 240px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*border: solid black;*/
+    border-radius: 5px;
+}
+
+.question:hover{
+    background-color: #d0eeff;
+}
+
+.question-left-col{
+    height: 100%;
+}
+
+.question-right-col{
+    height: 100%;
+}
+
+.question-header{
+    margin-top: 5px;
+}
+
+.question-header>a{
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+.question-avatar{
+    margin-top: 10%;
+    height: 150px;
+    width: 100%;
+}
+
+.question-avatar>img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.question-annotation{
+    max-height: 60%;
+}
+
+.question-annotation>p{
+    font-size: 20px;
+}
+
+.question-likes{
+    font-size: 20px;
+    margin-top: 5%;
+    height: 50px;
+}
+
+
+
+.question-bottom{
+    width: 100%;
+}
+
+.tags{
+    width: 100%;
+    height: 200px;
+}
+
+.members{
+    width: 100%;
+    height: 200px;
+}
+
+.bottom-row{
+    margin-top: 25px;
+    padding-right: 15px;
+    /*margin-bottom: 5px;*/
+    width: 100%;
+}
+
+.page-numbers{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    border: thin solid black;
+}
+
+.page-numbers>p{
+    text-align: center;
+    padding: 5px;
+}
+
+
+.border-block{
+    border: thin solid black;
+}
+
+.errors{
+
+    color: red;
+}
+
+.registration-button{
+    margin-top: 20px;
+}
+
+
+.settings-avatar {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.settings-avatar > img {
+    border-radius: 10px ;
+    width: 100px;
+    height: 100%;
+}
+
+
+
+
+

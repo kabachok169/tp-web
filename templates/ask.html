@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block headers %}
+    <div class="col-md-4">
+        <h1 class="questions-headers">New Question</h1>
+    </div>
+{% endblock %}
+
+{% block left_main_content %}
+    <div class="row">
+        <div class="col-md-4 title"><p>Title:</p></div>
+        <div class="col-md-8 input"><input type="text"/></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 title"><p>Text:</p></div>
+        <div class="col-md-8 input"><textarea></textarea></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 title"><p>Tags:</p></div>
+        <div class="col-md-8 input"><input type="text"/></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8"><a class="btn btn-primary">ASK!</a></div>
+    </div>
+{% endblock %}
+
+{% block right-main-content %}
+    {% include "right_col_template.html" %}
+{% endblock %}
+
+{% block bottom %}
+
+{% endblock %}

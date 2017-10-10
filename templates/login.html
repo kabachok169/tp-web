@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block headers %}
+    <div class="col-md-4">
+        <h1 class="questions-headers">Log in</h1>
+    </div>
+{% endblock %}
+
+{% block left_main_content %}
+    <div class="row">
+        <div class="col-md-12 errors"><span>Error</span></div>
+    </div>
+    <div style="margin-top: 30px"></div>
+    <div class="row">
+        <div class="col-md-4 title"><p>Login:</p></div>
+        <div class="col-md-4 input"><input class="form-control" type="text"/></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 title"><p>Password:</p></div>
+        <div class="col-md-4 input"><input class="form-control" type="password"/></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8"><a class="btn btn-primary registration-button">Log in!</a></div>
+    </div>
+{% endblock %}
+
+{% block right-main-content %}
+    {% include "right_col_template.html" %}
+{% endblock %}
+
+{% block bottom %}
+
+{% endblock %}
