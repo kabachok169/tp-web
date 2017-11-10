@@ -7,22 +7,25 @@
 {% endblock %}
 
 {% block left_main_content %}
-    <div class="row">
-        <div class="col-md-4 title"><p>Title:</p></div>
-        <div class="col-md-8 input"><input type="text"/></div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 title"><p>Text:</p></div>
-        <div class="col-md-8 input"><textarea></textarea></div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 title"><p>Tags:</p></div>
-        <div class="col-md-8 input"><input type="text"/></div>
-    </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-8"><a class="btn btn-primary">ASK!</a></div>
-    </div>
+    <form action="{% url 'save_question' %}" method="post">
+    {% csrf_token %}
+        <div class="row">
+            <div class="col-md-2 title"><p>Title:</p></div>
+            <div class="col-md-8 input"><input name="title" type="text"/></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 title"><p>Text:</p></div>
+            <div class="col-md-8 input"><textarea name="text"></textarea></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 title"><p>Tags:</p></div>
+            <div class="col-md-8 input"><input name="tags" type="text"/></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8"><button type="submit" class="btn btn-primary">ASK!</button></div>
+        </div>
+    </form>
 {% endblock %}
 
 {% block right-main-content %}

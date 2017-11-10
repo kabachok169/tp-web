@@ -18,9 +18,10 @@
 <div class="top-bar">
         <div class="row top">
             <div class="col-md-8 left-top">
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <h1 class="main-header">MyAsk</h1>
                 </div>
+                <div class="col-md-1"><a class="btn btn-primary" href="{% url "create_question" %}">Ask!</a></div>
                 <div class="col-md-7">
                     <div class="center-top">
                         <div class="input-group">
@@ -34,24 +35,11 @@
                 </div>
             </div>
             <div class="col-md-4 right-top">
-                <div>
-                    <div class="avatar">
-                        <img src="../static/imgs/i.jpeg">
-                    </div>
-                    <div class="acc-info">
-                        <div class="acc-name">
-                            <p>Mr.Smith</p>
-                        </div>
-                        <div class="acc-attr">
-                            <a class="settings">settings</a>
-                            <a class="log-out">log out</a>
-                            <a class="settings" style="display: none">registration</a>
-                            <a class="log-out" style="display: none">log in</a>
-                        </div>
-
-                    </div>
-                </div>
-
+                {% if user.is_authenticated %}
+                    {% include "logged_header.html" %}
+                {% else %}
+                    {% include "unlogged_header.html" %}
+                {% endif %}
             </div>
 
         </div>

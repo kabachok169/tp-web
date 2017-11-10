@@ -2,30 +2,28 @@
 
 {% block headers %}
     <div class="col-md-4">
-        <h1 class="questions-headers">New Questions</h1>
+        <h1 class="questions-headers">Hot Questions</h1>
     </div>
     <div class="col-md-4">
-        <a href="{% url 'hot' %}" class="link">Hot Questions</a>
-        <a href="login.html" class="link">login</a>
+        <a href="{% url 'index' %}" class="link">New Questions</a>
     </div>
 {% endblock %}
 
 {% block left_main_content %}
     <div class="question-row">
-    {% for question in questions.object_list %}
+    {% for question in questions %}
         <div id='{{ question.id }}' class="question">
             <div class="col-md-3 question-left-col">
                 <div class="question-avatar">
                     <img src="../static/imgs/i.jpeg">
                 </div>
                 <div class="question-likes">
-                    <a class="glyphicon glyphicon-thumbs-up" style="color: green"></a>
+                    <i class="glyphicon glyphicon-thumbs-up"></i>
                     <span>{{ question.likes }}</span>
-                    <a class="glyphicon glyphicon-thumbs-down" style="color: red"></a>
+                    <i class="glyphicon glyphicon-thumbs-down"></i>
                 </div>
             </div>
-            <div class="col-md-1" style="height:100%; border-left: thin black solid"></div>
-            <div class="col-md-8 question-right-col">
+            <div class="col-md-9 question-right-col">
                 <div class="question-header">
                     <a href="{% url 'question' question.id %}" class="question-header">{{ question.title }}</a>
                 </div>
@@ -45,15 +43,23 @@
 
     <nav aria-label="Page navigation">
         <ul class="pagination">
-            {% if questions.has_previous %}
-                <li><a href="?page={{ questions.previous_page_number }}">Previous</a></li>
-            {% endif %}
-            {% if questions.has_next %}
-                <li><a href="?page={{ questions.next_page_number }}">Next</a></li>
-            {% endif %}
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
         </ul>
     </nav>
-
 {% endblock %}
 
 {% block right-main-content %}
@@ -61,4 +67,5 @@
 {% endblock %}
 
 {% block bottom %}
+
 {% endblock %}

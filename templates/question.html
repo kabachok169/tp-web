@@ -2,10 +2,8 @@
 
 {% block headers %}
     <div class="col-md-4">
-        <h1 class="questions-headers">New Questions</h1>
-    </div>
-    <div class="col-md-4">
-        <a class="link">Hot Questions</a>
+        <a href="{% url 'index' %}" class="link">New Questions</a>
+        <a href="{% url 'hot' %}" class="link">Hot Questions</a>
     </div>
 {% endblock %}
 
@@ -17,25 +15,22 @@
             </div>
             <div class="question-likes">
                 <i class="glyphicon glyphicon-thumbs-up"></i>
-                <span>42</span>
+                <span>{{ question.likes }}</span>
                 <i class="glyphicon glyphicon-thumbs-down"></i>
             </div>
         </div>
         <div class="col-md-9 question-right-col">
             <div class="question-header">
-                <a class="question-header">Name of the question</a>
+                <a class="question-header">{{ question.title }}</a>
             </div>
             <div class="question-annotation">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>{{ question.text }}</p>
             </div>
             <div class="question-bottom">
-                <span>Answers: 5</span>
-                <a href="#"><span class="badge">lorem</span></a>
-                <a href="#"><span class="badge">ipsum</span></a>
+                <span>Answers: {{ question.answers }}</span>
+                {% for tag in question.tags %}
+                    <a href="#"><span class="badge">{{ tag }}</span></a>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -45,10 +40,6 @@
             <div class="col-md-3 question-left-col">
                 <div class="question-avatar">
                     <img src="../static/imgs/i.jpeg">
-                </div>
-                <div class="question-likes">
-                    <div></div>
-                    <div></div>
                 </div>
             </div>
             <div class="col-md-9 answer-col">
